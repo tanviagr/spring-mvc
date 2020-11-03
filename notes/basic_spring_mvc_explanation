@@ -1,0 +1,8 @@
+1. Client -> request
+2. Request goes to web.xml
+3. web.xml should be configured to say that all the requests should be sent to the DispatcherServlet. (Front controller that we don't write, it is inbuilt in the spring package - it controls all the controllers and makes them easier to manage.)
+4. The front controller knows about all the controllers in the application. Controllers are the ones that perform the business logic.
+5. The Dispatcher Servlet needs a config file to tell for which request to call which controller.
+6. All your controllers will be annotated with @Controller. Every Controller will have some mapping. You have to only mention in your config file - in which package you have all the controllers.
+7. The controller returns the model (data) and the page name. 
+8. The Dispatcher Servlet calls the view and then returns to the client. 
